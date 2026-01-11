@@ -74,7 +74,7 @@ titanic_project/
 12. **Cross-Validation** - 5-fold StratifiedKFold validation
 13. **Coefficient Analysis** - Interpret feature importance
 14. **Test Predictions** - Generate submission file for Kaggle
-15. **Recommendations** - Provide improvement suggestions
+
 
 ## Key Results
 
