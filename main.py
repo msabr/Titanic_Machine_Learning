@@ -99,76 +99,9 @@ def run_complete_analysis():
     predictions = evaluator.generate_predictions(best_model, X_test_full_scaled, test_passenger_ids)
     save_predictions(predictions)
     
-    # Display recommendations
-    display_completion_message()
     
-    # Add recommendations
-    print("\n" + "="*80)
-    print("STEP 15: RECOMMENDATIONS FOR IMPROVEMENT")
-    print("="*80)
     
-    recommendations = """
     
-1. ADVANCED FEATURE ENGINEERING
-   • Interaction features: Pclass × Sex, Age × Pclass
-   • Polynomial features for numerical variables
-   • Extract more granular information from Cabin (deck letter)
-   • Create fare-per-person feature (Fare / FamilySize)
-   • Binning: Experiment with different age/fare grouping strategies
-   
-2. OUTLIER DETECTION AND TREATMENT
-   • Identify outliers in Fare and Age using IQR or z-score
-   • Analyze impact of extreme values on model performance
-   • Consider robust scaling methods (RobustScaler)
-   • Investigate passengers with very high fares or unusual ages
-   
-3. ALTERNATIVE ALGORITHMS
-   • Random Forest: Handles non-linear relationships, feature interactions
-   • Gradient Boosting (XGBoost, LightGBM, CatBoost): Often best performance
-   • Support Vector Machines: Effective for binary classification
-   • Neural Networks: Can capture complex patterns
-   • Naive Bayes: Fast baseline, works well with categorical features
-   
-4. ENSEMBLE TECHNIQUES
-   • Voting Classifier: Combine multiple models (Logistic, RF, XGBoost)
-   • Stacking: Use meta-learner on predictions from base models
-   • Bagging: Bootstrap aggregating for variance reduction
-   • Boosting: Sequential learning to improve weak learners
-   
-5. FEATURE SELECTION TECHNIQUES
-   • Recursive Feature Elimination (RFE)
-   • SelectKBest with chi-squared or f_classif
-   • L1 regularization for automatic feature selection
-   • Principal Component Analysis (PCA) for dimensionality reduction
-   
-6. HYPERPARAMETER TUNING
-   • Use RandomizedSearchCV for larger parameter spaces
-   • Bayesian optimization (e.g., Optuna, Hyperopt)
-   • Try different regularization strengths more granularly
-   • Experiment with class_weight for imbalanced data handling
-   
-7. CROSS-VALIDATION STRATEGIES
-   • Nested cross-validation for unbiased evaluation
-   • Leave-one-out cross-validation for small datasets
-   • Time-based splits if temporal patterns exist
-   
-8. DATA AUGMENTATION
-   • SMOTE for balancing classes (if needed)
-   • Generate synthetic samples using mixup
-   
-9. MODEL INTERPRETABILITY
-   • SHAP values for feature importance
-   • LIME for local interpretability
-   • Partial dependence plots
-   
-10. ADDITIONAL DATA SOURCES
-    • External datasets: Historical context, ship layout
-    • Domain knowledge: Titanic disaster research
-    • Feature engineering based on survival stories
-        """
-    
-    print(recommendations)
-
 
 if __name__ == "__main__":
     run_complete_analysis()

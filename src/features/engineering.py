@@ -1,6 +1,3 @@
-"""
-Feature engineering module.
-"""
 
 import pandas as pd
 import numpy as np
@@ -8,16 +5,14 @@ from src.utils.config import AGE_BINS, AGE_LABELS
 
 
 class FeatureEngineer:
-    """Handles feature engineering and encoding."""
+    
     
     def __init__(self):
         self.fare_bins = None
         self.feature_names = None
     
     def feature_engineering(self, train_df, test_df):
-        """
-        Create new features to improve model performance.
-        """
+        
         print("\n" + "="*80)
         print("STEP 4: FEATURE ENGINEERING")
         print("="*80)
