@@ -4,7 +4,7 @@
 [![GitHub](https://img.shields.io/badge/GitHub-Titanic__Machine__Learning-181717?logo=github&logoColor=white)](https://github.com/msabr/Titanic_Machine_Learning)
 [![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
+<img src="/src/img/Titanic.jpg"  width="100%">
 > Predict which passengers survived the Titanic shipwreck using machine learning — a classic binary classification challenge from Kaggle.
 
 **Academic project (2025–2026)** supervised by **Prof. N. ABOUTABIT**  
